@@ -28,14 +28,14 @@
     "units" : "English",
     "scene" : {
         "atmosphere" : {
-            "rho": 0.0014963
+            "rho": 0.0023084
         },
         "aircraft" : {
             "F16" : {
                 "file" : "F16_airplane.json",
                 "state" : {
-                    "position" : [0.0, 0.0, -15000.0],
-                    "velocity" : 634.4133,
+                    "position" : [0.0, 0.0, -1000.0],
+                    "velocity" : 222.5211,
                     "alpha" : 0.0,
                     "beta" : 0.0
                 },
