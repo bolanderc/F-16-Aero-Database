@@ -35,14 +35,14 @@ input_file = "F16_input.json"
 # atmospheric data.
 my_scene = MX.Scene(input_file)
 
-# We are now ready to perform analyses. display_wireframe will let us look at 
-# the aircraft we have created. To make sure we know where each lifting surface 
+# We are now ready to perform analyses. display_wireframe will let us look at
+# the aircraft we have created. To make sure we know where each lifting surface
 # is, we'll set show_legend to true.
 my_scene.display_wireframe()
 alpha = np.linspace(np.deg2rad(-10), np.deg2rad(10), 10)
 CL = np.zeros(len(alpha))
 for i in range(len(alpha)):
-    my_scene.set_aircraft_state(state={"alpha" : alpha[i], "velocity" : 634.4133})
+    my_scene.set_aircraft_state(state={"alpha" : alpha[i], "velocity" : 222.5211})
     FM_results = my_scene.solve_forces(dimensional=True, non_dimensional=True, verbose=True, report_by_segment=True)
     CL[i] = json.dumps(FM_results["F16"]["total"]["CL"])
 t1 = time.time()
@@ -62,7 +62,7 @@ print(t1 - t0)
 # CL_tail = np.zeros_like(alpha)
 
 # Let's see what forces are acting on the airplane. We'll output just the total
-# dimensional forces and moments acting on the airplane. Note we need to know 
+# dimensional forces and moments acting on the airplane. Note we need to know
 # the name of the airplane to be able to access its data.
 # for i in range(20):
 #     my_scene.set_aircraft_state(state={"alpha" : alpha[i], "velocity" : 596.9097})
@@ -77,8 +77,8 @@ print(t1 - t0)
 
 # dist_results = my_scene.distributions(make_plots=["section_CL"])
 
-# Now let's get the airplane to its trim state in pitch. MachUpX will default to 
-# Using the 'elevator' control to trim out the airplane. We can use set_trim_state 
+# Now let's get the airplane to its trim state in pitch. MachUpX will default to
+# Using the 'elevator' control to trim out the airplane. We can use set_trim_state
 # to have MachUpX set the trim state to be the new state of the airplane.
 # trim_state = my_scene.pitch_trim(set_trim_state=True, verbose=True)
 # print(json.dumps(trim_state["F16"], indent=4))

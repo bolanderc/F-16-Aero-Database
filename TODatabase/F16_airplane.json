@@ -19,7 +19,7 @@
     },
     "airfoils" : {
         "NACA_64A210" : {
-            "type" : "linear",	
+            "type" : "linear",
             "aL0" : -0.0334,
             "CLa" : 7.0409,
             "amo" : 0.1706,
@@ -30,7 +30,7 @@
             "CL_max" : 1.025
         },
         "thin_symmetric" : {
-            "type" : "linear",	
+            "type" : "linear",
             "aL0" : 0.0,
             "CLa" : 8.0469,
             "amo" : 0.0,
@@ -39,6 +39,27 @@
             "CD1" : 0.00008,
             "CD2" : 0.02193,
             "CL_max" : 1.025
+        },
+        "NACA_64A204" : {
+            "type" : "database",
+            "input_file" : "main_wing_database.txt",
+            "geometry" : {
+                "outline_points" : "64A204.txt"
+            }
+        },
+        "horizontal_tail" : {
+            "type" : "database",
+            "input_file" : "horizontal_tail_database.txt",
+            "geometry" : {
+                "NACA" : "0005"
+            }
+        },
+        "vertical_tail" : {
+            "type" : "database",
+            "input_file" : "vertical_tail_database.txt",
+            "geometry" : {
+                "NACA" : "0004"
+            }
         }
     },
     "wings" : {
@@ -54,7 +75,7 @@
             "twist" : 0.0,
             "sweep" : 32.2,
             "chord" : [[0.0,16.21],[1.0,3.67]],
-            "airfoil" : "NACA_64A210",
+            "airfoil" : "NACA_64A204",
             "control_surface" : {
                 "root_span" : 0.2327,
                 "tip_span" : 0.7427,
@@ -81,7 +102,7 @@
             "sweep" : 32.2,
             "chord" : [[0.0, 10.73], [1.0, 3.03]],
             "dihedral" : [[0.0, 0.0], [0.372826087, 0.0], [0.372826087, -10], [1.0, -10]],
-            "airfoil" : "thin_symmetric",
+            "airfoil" : "horizontal_tail",
             "control_surface" : {
                 "root_span" : 0.372826087,
                 "tip_span" : 1.0,
@@ -108,7 +129,7 @@
             "sweep" : 45,
             "chord" : [[0.0,10.25],[1.0,4.02]],
             "dihedral" : 90.0,
-            "airfoil" : "thin_symmetric",
+            "airfoil" : "vertical_tail",
             "control_surface" : {
                 "root_span" : 0.35,
                 "tip_span" : 0.92,
