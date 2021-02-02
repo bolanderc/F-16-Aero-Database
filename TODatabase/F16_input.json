@@ -1,0 +1,50 @@
+{
+    "tag" : "F-16 input file",
+    "run" : {
+        "display_wireframe" : {
+            "show_legend" : true,
+            "filename" : "./F16wireframe.png"
+        },
+        "forces" : {
+            "non_dimensional" : true
+        },
+        "pitch_trim" : {
+            "set_state_to_trim" : true
+        },
+        "aero_derivatives" : {},
+        "distributions" : {
+            "make_plots" : ["section_CL"]
+        },
+        "aero_center" : {},
+        "stl" : {}
+    },
+    "solver" : {
+        "type" : "nonlinear",
+        "constraint_vortex_sheet" : true,
+        "convergence" : 1e-7,
+        "relaxation" : 0.9,
+        "max_iterations" : 300
+    },
+    "units" : "English",
+    "scene" : {
+        "atmosphere" : {
+            "rho": 0.0014963
+        },
+        "aircraft" : {
+            "F16" : {
+                "file" : "F16_airplane.json",
+                "state" : {
+                    "position" : [0.0, 0.0, -15000.0],
+                    "velocity" : 634.4133,
+                    "alpha" : 0.0,
+                    "beta" : 0.0
+                },
+                "control_state" : {
+                    "elevator" : 0.0,
+                    "rudder" : 0.0,
+                    "aileron" : 0.0
+                }
+            }
+        }
+    }
+}
