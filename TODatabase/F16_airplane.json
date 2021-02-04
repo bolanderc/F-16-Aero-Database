@@ -108,7 +108,7 @@
                 "chord_fraction" : 1.0,
                 "control_mixing" : {
                     "elevator" : 1.0,
-                    "aileron" : 0.5
+                    "aileron" : 0.25
                 }
             },
             "grid" : {

@@ -38,7 +38,7 @@ my_scene = MX.Scene(input_file)
 # We are now ready to perform analyses. display_wireframe will let us look at
 # the aircraft we have created. To make sure we know where each lifting surface
 # is, we'll set show_legend to true.
-my_scene.display_wireframe(show_vortices=False)
+my_scene.display_wireframe(show_vortices=True)
 my_scene.export_stl(filename="F16.stl")
 # alpha = np.linspace(np.deg2rad(-10), np.deg2rad(10), 10)
 # CL = np.zeros(len(alpha))
