@@ -38,15 +38,16 @@ my_scene = MX.Scene(input_file)
 # We are now ready to perform analyses. display_wireframe will let us look at
 # the aircraft we have created. To make sure we know where each lifting surface
 # is, we'll set show_legend to true.
-my_scene.display_wireframe()
-alpha = np.linspace(np.deg2rad(-10), np.deg2rad(10), 10)
-CL = np.zeros(len(alpha))
-for i in range(len(alpha)):
-    my_scene.set_aircraft_state(state={"alpha" : alpha[i], "velocity" : 222.5211})
-    FM_results = my_scene.solve_forces(dimensional=True, non_dimensional=True, verbose=True, report_by_segment=True)
-    CL[i] = json.dumps(FM_results["F16"]["total"]["CL"])
-t1 = time.time()
-print(t1 - t0)
+my_scene.display_wireframe(show_vortices=False)
+my_scene.export_stl(filename="F16.stl")
+# alpha = np.linspace(np.deg2rad(-10), np.deg2rad(10), 10)
+# CL = np.zeros(len(alpha))
+# for i in range(len(alpha)):
+#     my_scene.set_aircraft_state(state={"alpha" : alpha[i], "velocity" : 222.5211})
+#     FM_results = my_scene.solve_forces(dimensional=True, non_dimensional=True, verbose=True, report_by_segment=True)
+#     CL[i] = json.dumps(FM_results["F16"]["total"]["CL"])
+# t1 = time.time()
+# print(t1 - t0)
 # trim_state = my_scene.pitch_trim(set_trim_state=True, verbose=True)
 # print(json.dumps(trim_state["F16"], indent=4))
 # derivs = my_scene.derivatives()

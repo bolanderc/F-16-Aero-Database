@@ -20,8 +20,8 @@
     },
     "solver" : {
         "type" : "nonlinear",
-        "constraint_vortex_sheet" : true,
-        "convergence" : 1e-7,
+        "constrain_vortex_sheet" : true,
+        "convergence" : 1e-9,
         "relaxation" : 0.9,
         "max_iterations" : 300
     },
@@ -34,9 +34,8 @@
             "F16" : {
                 "file" : "F16_airplane.json",
                 "state" : {
-                    "position" : [0.0, 0.0, -1000.0],
                     "velocity" : 222.5211,
-                    "alpha" : 0.0,
+                    "alpha" : 10.0,
                     "beta" : 0.0
                 },
                 "control_state" : {
