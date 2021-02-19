@@ -21,7 +21,7 @@
     "solver" : {
         "type" : "nonlinear",
         "constrain_vortex_sheet" : true,
-        "convergence" : 1e-9,
+        "convergence" : 1e-8,
         "relaxation" : 0.9,
         "max_iterations" : 300
     },
