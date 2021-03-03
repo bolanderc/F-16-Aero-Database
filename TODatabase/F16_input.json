@@ -23,7 +23,7 @@
         "constrain_vortex_sheet" : true,
         "convergence" : 1e-8,
         "relaxation" : 0.9,
-        "max_iterations" : 600
+        "max_iterations" : 500
     },
     "units" : "English",
     "scene" : {
