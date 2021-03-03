@@ -45,16 +45,15 @@ forces_options = {'body_frame': False,
                   'wind_frame': False,
                   'dimensional': False,
                   'verbose': False}
-alpha = np.linspace(-np.deg2rad(30), np.deg2rad(30), 3)
-beta = np.linspace(-np.deg2rad(30), np.deg2rad(30), 3)
-d_e = np.linspace(-np.deg2rad(30), np.deg2rad(30), 3)
-d_a = np.linspace(-np.deg2rad(30), np.deg2rad(30), 3)
-d_r = np.linspace(-np.deg2rad(30), np.deg2rad(30), 3)
-p = np.linspace(-1.2, 1.2, 3)
-q = np.linspace(-1.2, 1.2, 3)
-r = np.linspace(-0.3925, 0.3925, 3)
+alpha = np.linspace(-np.deg2rad(30), np.deg2rad(30), 6)
+beta = np.linspace(-np.deg2rad(30), np.deg2rad(30), 6)
+d_e = np.linspace(-np.deg2rad(30), np.deg2rad(30), 6)
+d_a = np.linspace(-np.deg2rad(30), np.deg2rad(30), 6)
+d_r = np.linspace(-np.deg2rad(30), np.deg2rad(30), 6)
+p = np.linspace(-1.2, 1.2, 5)
+q = np.linspace(-1.2, 1.2, 5)
+r = np.linspace(-0.3925, 0.3925, 5)
 cases = list(itertools.product(alpha, beta, d_e, d_a, d_r, p, q, r))
-# cases = list(itertools.product(alpha, beta))
 
 if __name__ == '__main__':
 
@@ -76,8 +75,8 @@ if __name__ == '__main__':
                                'Cn_s'))
     f.close()
 
-    bat = 2000
-    chu = 1
+    bat = 5000
+    chu = 2
 
     zm.nm.runCases(database, cases, fn, nBatch=bat, chunkSize=chu,
                    progKW={'title': 'Running Cases: {}/batch, {}/chunck'.format(bat, chu)})
