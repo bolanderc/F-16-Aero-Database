@@ -45,14 +45,22 @@ forces_options = {'body_frame': False,
                   'wind_frame': False,
                   'dimensional': False,
                   'verbose': False}
-alpha = np.linspace(-np.deg2rad(30), np.deg2rad(30), 6)
-beta = np.linspace(-np.deg2rad(30), np.deg2rad(30), 6)
-d_e = np.linspace(-np.deg2rad(30), np.deg2rad(30), 6)
-d_a = np.linspace(-np.deg2rad(30), np.deg2rad(30), 6)
-d_r = np.linspace(-np.deg2rad(30), np.deg2rad(30), 6)
-p = np.linspace(-1.2, 1.2, 5)
-q = np.linspace(-1.2, 1.2, 5)
-r = np.linspace(-0.3925, 0.3925, 5)
+aoa_lim = 7
+beta_lim = 15
+da_lim = 21.5
+de_lim = 25
+dr_lim = 30
+pq_lim = 1.2
+r_lim = 0.3925
+num_pts = 3
+alpha = np.linspace(-aoa_lim, aoa_lim, num_pts)
+beta = np.linspace(-beta_lim, beta_lim, num_pts)
+d_e = np.linspace(-de_lim, de_lim, num_pts)
+d_a = np.linspace(-da_lim, da_lim, num_pts)
+d_r = np.linspace(-dr_lim, dr_lim, num_pts)
+p = np.linspace(-pq_lim, pq_lim, num_pts)
+q = np.linspace(-pq_lim, pq_lim, num_pts)
+r = np.linspace(-r_lim, r_lim, num_pts)
 cases = list(itertools.product(alpha, beta, d_e, d_a, d_r, p, q, r))
 
 if __name__ == '__main__':
@@ -75,7 +83,7 @@ if __name__ == '__main__':
                                'Cn_s'))
     f.close()
 
-    bat = 5000
+    bat = 1000
     chu = 2
 
     zm.nm.runCases(database, cases, fn, nBatch=bat, chunkSize=chu,

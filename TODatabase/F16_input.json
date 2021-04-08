@@ -13,17 +13,17 @@
         },
         "aero_derivatives" : {},
         "distributions" : {
+            "filename" : "f16",
             "make_plots" : ["section_CL"]
         },
         "aero_center" : {},
         "stl" : {}
     },
     "solver" : {
-        "type" : "nonlinear",
-        "constrain_vortex_sheet" : true,
-        "convergence" : 1e-8,
+        "type" : "linear",
+        "convergence" : 1e-10,
         "relaxation" : 0.9,
-        "max_iterations" : 500
+        "max_iterations" : 1000
     },
     "units" : "English",
     "scene" : {
@@ -35,7 +35,7 @@
                 "file" : "F16_airplane.json",
                 "state" : {
                     "velocity" : 222.5211,
-                    "alpha" : 10.0,
+                    "alpha" : 15.0,
                     "beta" : 0.0
                 },
                 "control_state" : {

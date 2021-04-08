@@ -76,7 +76,7 @@
             "chord" : [[0.0,16.40997],[1.0,3.28304]],
             "dihedral" : 0.0,
             "airfoil" : "NACA_64A204",
-            "control_surface" : {
+            "control_surfacex" : {
                 "root_span" : 0.22667,
                 "tip_span" : 0.75733,
                 "chord_fraction" : [[0.22667, 0.22188], [0.75733, 0.23226]],
@@ -85,7 +85,7 @@
                 }
             },
             "grid" : {
-                "N" : 100,
+                "N" : 90,
                 "reid_corrections" : true
             }
         },
@@ -109,7 +109,7 @@
                 "chord_fraction" : 1.0,
                 "control_mixing" : {
                     "elevator" : 1.0,
-                    "aileron" : 0.25
+                    "aileron" : 1.0
                 }
             },
             "grid" : {
