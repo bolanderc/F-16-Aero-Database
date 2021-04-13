@@ -136,7 +136,7 @@
                 "tip_span" : 0.95400,
                 "chord_fraction" : [[0.35844,0.34389],[0.95400,0.39489]],
                 "control_mixing" : {
-                    "rudder" : 1.0
+                    "rudder" : -1.0
                 }
             },
             "grid" : {

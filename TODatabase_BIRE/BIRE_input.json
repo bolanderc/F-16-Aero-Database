@@ -1,0 +1,48 @@
+{
+    "tag" : "BIRE input file",
+    "run" : {
+        "display_wireframe" : {
+            "show_legend" : true,
+            "filename" : "./BIREwireframe.png"
+        },
+        "forces" : {
+            "non_dimensional" : true
+        },
+        "pitch_trim" : {
+            "set_state_to_trim" : true
+        },
+        "aero_derivatives" : {},
+        "distributions" : {
+            "filename" : "BIRE",
+            "make_plots" : ["section_CL"]
+        },
+        "aero_center" : {},
+        "stl" : {}
+    },
+    "solver" : {
+        "type" : "linear",
+        "convergence" : 1e-10,
+        "relaxation" : 0.9,
+        "max_iterations" : 1000
+    },
+    "units" : "English",
+    "scene" : {
+        "atmosphere" : {
+            "rho": 0.0023084
+        },
+        "aircraft" : {
+            "BIRE" : {
+                "file" : "BIRE_airplane.json",
+                "state" : {
+                    "velocity" : 222.5211,
+                    "alpha" : 0.0,
+                    "beta" : 0.0
+                },
+                "control_state" : {
+                    "elevator" : 0.0,
+                    "aileron" : 0.0
+                }
+            }
+        }
+    }
+}
