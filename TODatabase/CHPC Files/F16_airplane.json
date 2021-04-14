@@ -27,7 +27,7 @@
             "CD0" : 0.004377,
             "CD1" : 0.001146,
             "CD2" : 0.00917,
-            "CL_max" : 1.025,
+            "CL_maxs" : 1.025,
             "geometry" : {
                 "outline_points" : "64A204.txt"
             }
@@ -41,7 +41,7 @@
             "CD0" : 0.0044,
             "CD1" : 0.0,
             "CD2" : 0.0046,
-            "CL_max" : 1.025,
+            "CL_maxs" : 1.025,
             "geometry" : {
                 "NACA" : "0005"
             }
@@ -55,7 +55,7 @@
             "CD0" : 0.0042,
             "CD1" : 0.0,
             "CD2" : 0.0082,
-            "CL_max" : 1.025,
+            "CL_maxs" : 1.025,
             "geometry" : {
                 "NACA" : "0004"
             }
@@ -76,14 +76,6 @@
             "chord" : [[0.0,16.40997],[1.0,3.28304]],
             "dihedral" : 0.0,
             "airfoil" : "NACA_64A204",
-            "control_surfacex" : {
-                "root_span" : 0.22667,
-                "tip_span" : 0.75733,
-                "chord_fraction" : [[0.22667, 0.22188], [0.75733, 0.23226]],
-                "control_mixing" : {
-                    "aileron" : 1.0
-                }
-            },
             "grid" : {
                 "N" : 90,
                 "reid_corrections" : true
@@ -136,7 +128,7 @@
                 "tip_span" : 0.95400,
                 "chord_fraction" : [[0.35844,0.34389],[0.95400,0.39489]],
                 "control_mixing" : {
-                    "rudder" : -1.0
+                    "rudder" : 1.0
                 }
             },
             "grid" : {

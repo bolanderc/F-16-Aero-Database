@@ -1,9 +1,9 @@
 {
-    "tag" : "F-16 input file",
+    "tag" : "BIRE input file",
     "run" : {
         "display_wireframe" : {
             "show_legend" : true,
-            "filename" : "./F16wireframe.png"
+            "filename" : "./BIREwireframe.png"
         },
         "forces" : {
             "non_dimensional" : true
@@ -13,7 +13,7 @@
         },
         "aero_derivatives" : {},
         "distributions" : {
-            "filename" : "f16",
+            "filename" : "BIRE",
             "make_plots" : ["section_CL"]
         },
         "aero_center" : {},
@@ -31,16 +31,15 @@
             "rho": 0.0023084
         },
         "aircraft" : {
-            "F16" : {
-                "file" : "F16_airplane.json",
+            "BIRE" : {
+                "file" : "BIRE_airplane.json",
                 "state" : {
                     "velocity" : 222.5211,
-                    "alpha" : 15.0,
+                    "alpha" : 0.0,
                     "beta" : 0.0
                 },
                 "control_state" : {
                     "elevator" : 0.0,
-                    "rudder" : 0.0,
                     "aileron" : 0.0
                 }
             }

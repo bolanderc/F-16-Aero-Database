@@ -45,14 +45,14 @@ forces_options = {'body_frame': False,
                   'wind_frame': False,
                   'dimensional': False,
                   'verbose': False}
-aoa_lim = 7
+aoa_lim = 15
 beta_lim = 15
-da_lim = 21.5
+da_lim = 5.375
 de_lim = 25
 dr_lim = 30
 pq_lim = 1.2
 r_lim = 0.3925
-num_pts = 3
+num_pts = 5
 alpha = np.linspace(-aoa_lim, aoa_lim, num_pts)
 beta = np.linspace(-beta_lim, beta_lim, num_pts)
 d_e = np.linspace(-de_lim, de_lim, num_pts)
@@ -83,7 +83,7 @@ if __name__ == '__main__':
                                'Cn_s'))
     f.close()
 
-    bat = 1000
+    bat = 5000
     chu = 2
 
     zm.nm.runCases(database, cases, fn, nBatch=bat, chunkSize=chu,
