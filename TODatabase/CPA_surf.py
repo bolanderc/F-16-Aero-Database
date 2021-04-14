@@ -128,12 +128,6 @@ def surface_plot(fn):
     ax_CnCm.scatter(pts[-1, 2], pts[-1, 1], color='r')
     ax_CnCm.add_patch(PolygonPatch(alpha_CnCm, alpha=0.2, color='g'))
 
-    verts, edges, tris = alpha_shape_3D(pts, 2.0)
-    fig = plt.figure ()
-    ax = fig.add_subplot (1, 1, 1, projection = '3d')
-
-    ax.add_collection3d (Poly3DCollection (pts[verts]))
-
 
 
 fn = './pt_cloud.npy'
